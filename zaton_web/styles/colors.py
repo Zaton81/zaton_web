@@ -8,5 +8,5 @@ class Color(Enum):
     SECONDARY = "#FFFFFF" #blanco, para fondos
     BACKGROUND = "#F3F4F6" #gris claro, contenidos secundarios y fondos
     CONTENT = "#F97316" #naranja, cbotones y contenidos destacados 
-    PURPLE = "#10B981" #verde esmeralda, alternativo 
-    BUTTON = "cyan"
+    SEC_CONTENT = "#10B981" #verde esmeralda, alternativo 
+    TEXTO = "#000000" #NEGRO, texto principal

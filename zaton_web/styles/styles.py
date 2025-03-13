@@ -38,15 +38,43 @@ class Spacing(Enum):
 HEADER_STYLE= {
     "font_family": Font.SECONDARY.value,
     "font_weight": FontWeight.LIGHT.value,
-    #"background_color": Color.BACKGROUND.value
+    "background_color": Color.PRIMARY.value
 }
 #principal
-BASE_STYLE= {
-        "font_family": Font.DEFAULT.value,
-        "font_size" : "1em",
-        "font_weight": FontWeight.LIGHT.value,
-        "min_height":"100vh",
-        "align": "center"
+BASE_STYLE = {
+    "font_family": Font.DEFAULT.value,
+    "font_weight": FontWeight.LIGHT.value,
+    "background_color": Color.BACKGROUND.value,
+    rx.heading: {
+        "color": Color.TEXTO.value,
+        "font_family": Font.SECONDARY.value,
+        "font_weight": FontWeight.MEDIUM.value
+    },
+    rx.button: {
+        "width": "100%",
+        "height": "100%",
+        "padding": Size.SMALL.value,
+        "border_radius": Size.DEFAULT.value,
+        "color": Color.PRIMARY.value,
+        "background_color": Color.CONTENT.value,
+        "white_space": "normal",
+        "text_align": "start",
+        "--cursor-button": "pointer",
+        "_hover": {
+            "background_color": Color.SEC_CONTENT.value
+        }
+    },
+    rx.link: {
+        "color": Color.CONTENT.value,
+        "text_decoration": "none",
+        "_hover": {}
+    }
+}
+FOOTER_STYLE= {
+    "font_family": Font.SECONDARY.value,
+    "font_weight": FontWeight.LIGHT.value,
+    "background_color": Color.PRIMARY.value,
+    "font_color" : Color.BACKGROUND.value
 }
 
 #video
