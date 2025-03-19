@@ -1,6 +1,6 @@
 # 🌐 Zatón Web
 
-Bienvenido a **Zatón Web**, una página web personal diseñada y desarrollada como proyecto final del curso de Python en [Tokio School](https://tokioschool.com/). Este proyecto combina diseño moderno, funcionalidad y tecnologías avanzadas para crear una experiencia web única.
+Bienvenido a **Zatón Web**, una página web personal diseñada y desarrollada por Jorge Zatón. Este proyecto combina diseño moderno, funcionalidad y tecnologías avanzadas para crear una experiencia web única.
 
 ---
 
@@ -21,12 +21,6 @@ Bienvenido a **Zatón Web**, una página web personal diseñada y desarrollada c
 - **HTML y CSS**: Para el diseño y estilo de la web.
 - **JavaScript**: Para funcionalidades interactivas.
 - **Git y GitHub**: Control de versiones y almacenamiento del código.
-
----
-
-## 📂 Estructura del proyecto
-
-
 
 ---
 
