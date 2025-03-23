@@ -18,11 +18,7 @@ def index() -> rx.Component:
                     rx.heading(
                         LEMA, size="6"
                     ),
-                    rx.link(
-                        rx.button("Check out our docs!"),
-                        href="https://reflex.dev/docs/getting-started/introduction/",
-                        is_external=True,
-                    ),
+                    rx.image(src="/zaton_corchete.svg", width="50%", height="auto"),
                     spacing=Spacing.LARGE.value,
                     justify="center",
                     min_height="85vh",
@@ -32,7 +28,10 @@ def index() -> rx.Component:
                     card_buttons(
                         textos=["Portfolio", "Biografía", "Contacto", "Libros"],
                         enlaces = [PORTFOLIO, BIO, CONTACTO, LIBROS],
-                        iconos = ["briefcase_business", "user-pen", "mail", "book_text"]))
+                        iconos = ["briefcase_business", "user-pen", "mail", "book_text"]
+                    ),
+                    width="100%"
+                )
             )
         ),
         footer()

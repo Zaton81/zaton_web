@@ -17,6 +17,7 @@ class Size(Enum):
     BIG = "2em"
     VERY_BIG = "4em"
     MAX_BIG = "6em"
+    IMAGE = "30em"
 
 
 
@@ -74,7 +75,8 @@ FOOTER_STYLE= {
     "font_family": Font.SECONDARY.value,
     "font_weight": FontWeight.LIGHT.value,
     "background_color": Color.PRIMARY.value,
-    "font_color" : Color.BACKGROUND.value
+    "font_color" : Color.BACKGROUND.value,
+    "color" : Color.BACKGROUND.value
 }
 
 #video

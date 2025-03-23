@@ -59,16 +59,18 @@ def footer() -> rx.Component:
                         border_radius="25%",
                     ),
                     rx.text(
-                        f"© {datetime.date.today().year} Todos los derechos reservados. Web construida por.",
+                        f"© {datetime.date.today().year} Todos los derechos reservados. Web construida por ",
                             rx.link(
                                 "Jorge Zatón Pérez.",
                                 href=WEB_PERSONAL,
                                 is_external=True,
                                 color_scheme="orange"
-                    ),
+                            ),
                         size="3",
                         white_space="nowrap",
                         weight="medium",
+                        style = FOOTER_STYLE,
+                        font_color=Color.BACKGROUND.value
                     ),
                     spacing=Spacing.SMALL.value,
                     align="center",
@@ -91,12 +93,9 @@ def footer() -> rx.Component:
         width="100%",
         padding_x = Size.SMALL.value,
         padding_bottom= Size.DEFAULT.value,
-        #margin_x="2em",
-        #margin_top="2em",
         style=FOOTER_STYLE,
         bottom=Spacing.ZERO.value,
         z_index= "1000",
-        position="fixed",
-        #position="bottom",
-        font_family=Font.SECONDARY.value
+        position="fixed",  
+        font_family=Font.SECONDARY.value,
     )

@@ -4,6 +4,7 @@ from zaton_web.styles.constants import *
 from zaton_web.styles.styles import *
 from zaton_web.parts.footer import footer
 from zaton_web.parts.buttons import card_buttons
+from zaton_web.parts.forms import contact_form
 
 @rx.page(route= CONTACTO)
 def contacto() -> rx.Component:
@@ -18,21 +19,11 @@ def contacto() -> rx.Component:
                     rx.heading(
                         LEMA, size="6"
                     ),
-                    rx.link(
-                        rx.button("Check out our docs!"),
-                        href="https://reflex.dev/docs/getting-started/introduction/",
-                        is_external=True,
-                    ),
+                    contact_form(),
                     spacing=Spacing.LARGE.value,
                     justify="center",
                     min_height="85vh",
-                ),
-                rx.divider(orientation="vertical", color=Color.TEXTO.value, size="3", high="100%"),
-                rx.vstack(
-                    card_buttons(
-                        textos=["Portfolio", "Biografía", "Contacto", "Libros"],
-                        enlaces = [PORTFOLIO, BIO, CONTACTO, LIBROS],
-                        iconos = ["briefcase_business", "user-pen", "mail", "book_text"]))
+                )
             )
         ),
         footer()

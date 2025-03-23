@@ -18,22 +18,52 @@ def libros() -> rx.Component:
                     rx.heading(
                         LEMA, size="6"
                     ),
-                    rx.link(
-                        rx.button("Check out our docs!"),
-                        href="https://reflex.dev/docs/getting-started/introduction/",
-                        is_external=True,
-                    ),
+                    rx.text(TEXTO_LIBROS_PAGE, text_align="justify"),
+                    rx.image(src="/zaton_pajarita.svg", max_height = Size.IMAGE.value, width="auto"),
                     spacing=Spacing.LARGE.value,
                     justify="center",
+                    padding_x = Size.MEDIUM.value,
                     min_height="85vh",
+                    width = "45%"
                 ),
-                rx.divider(orientation="vertical", color=Color.TEXTO.value, size="3", high="100%"),
+                rx.divider(orientation="vertical", color=Color.TEXTO.value, size="3", height="100%"),
                 rx.vstack(
-                    card_buttons(
-                        textos=["Portfolio", "Biografía", "Contacto", "Libros"],
-                        enlaces = [PORTFOLIO, BIO, CONTACTO, LIBROS],
-                        iconos = ["briefcase_business", "user-pen", "mail", "book_text"]))
-            )
+                    rx.hstack(
+                        rx.image(src="/quiza_lo_quiso_portada.png", width= Size.IMAGE.value, height="auto"),
+                        rx.vstack(
+                            rx.text(SINOPSIS_QUIZA,
+                                    text_align = "justify",
+                            ),
+                            rx.link(
+                                rx.button("Cómprame", width = "100%"),
+                                href= AMAZON_QUIZA,
+                                is_external= True,
+                                width = "100%"
+                            )
+                        )
+                    ),
+                    rx.divider(color_scheme= "purple", margin_y= Size.MEDIUM.value),
+                    rx.hstack(
+                        rx.image(src="/Con_todo_portada.png", width= Size.IMAGE.value, height="auto"),
+                        rx.vstack(
+                            rx.text(SINOPSIS_CONTRA,
+                                    text_align = "justify",
+                            ),
+                            rx.link(
+                                rx.button("Cómprame", width = "100%"),
+                                href= AMAZON_CONTRA,
+                                is_external= True,
+                                width = "100%"
+                            ),
+                            padding_y = Size.BIG.value
+                        ),
+                    ),
+                    padding_y = Size.VERY_BIG.value,
+                    width = "45%"
+                ),
+                height = "100%"
+            ),
+            
         ),
         footer()
     )
