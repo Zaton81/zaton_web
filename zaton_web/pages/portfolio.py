@@ -4,6 +4,7 @@ from zaton_web.styles.constants import *
 from zaton_web.styles.styles import *
 from zaton_web.parts.footer import footer
 from zaton_web.parts.buttons import card_buttons
+from zaton_web.parts.cards import card_portfolio
 
 @rx.page(route= PORTFOLIO)
 def portfolio() -> rx.Component:
@@ -11,29 +12,26 @@ def portfolio() -> rx.Component:
     # Welcome Page (Index)
     return rx.box(
         navbar(),
-        rx.center(
-            rx.hstack(
-                rx.vstack(
-                    rx.heading("Jorge Zatón Pérez", size="9", align="center"),
-                    rx.heading(
-                        LEMA, size="6"
+        rx.vstack(
+            rx.heading("Portfolio", size="9", align="left", margin_x = Size.SMALL.value),
+            rx.text(TEXTO_PORTFOLIO1, weight="bold", margin_x = Size.BIG.value),
+            rx.text(TEXTO_PORTFOLIO2,  rx.link("GitHub", href=GITHUB, is_external=True), margin_x = Size.BIG.value),    
+            rx.center(
+                rx.hstack(
+                    card_portfolio(
+                        headers= [TAREAS, PROYECTOS, VIDEOFLIX, PERSONAL],
+                        textos = [TEXTO_TAREAS, TEXTO_PROYECTOS, TEXTO_VIDEOFLIX, TEXTO_PERSONAL],
+                        enlaces = [APP_TAREAS, APP_PROYECTOS, APP_VIDEOFLIX, APP_PERSONAL],
+                        imagenes = ["/tareas.png", "/proyectos.png", "/videoflix.png", "/webzaton.png"]
                     ),
-                    rx.link(
-                        rx.button("Check out our docs!"),
-                        href="https://reflex.dev/docs/getting-started/introduction/",
-                        is_external=True,
-                    ),
-                    spacing=Spacing.LARGE.value,
-                    justify="center",
-                    min_height="85vh",
                 ),
-                rx.divider(orientation="vertical", color=Color.TEXTO.value, size="3", high="100%"),
-                rx.vstack(
-                    card_buttons(
-                        textos=["Portfolio", "Biografía", "Contacto", "Libros"],
-                        enlaces = [PORTFOLIO, BIO, CONTACTO, LIBROS],
-                        iconos = ["briefcase_business", "user-pen", "mail", "book_text"]))
-            )
+            spacing=Spacing.SMALL.value,
+            width="100%",
+            padding_top=Size.BIG.value,
+            padding_bottom=Size.MAX_BIG.value,
+            #justify="center",
+            ),
         ),
-        footer()
+        footer(),
     )
+

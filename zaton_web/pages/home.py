@@ -23,15 +23,18 @@ def index() -> rx.Component:
                     justify="center",
                     min_height="85vh",
                 ),
-                rx.divider(orientation="vertical", color=Color.TEXTO.value, size="3", high="100%"),
+                rx.divider(orientation="vertical", color=Color.TEXTO.value, size="3", heigth="100vh"),
                 rx.vstack(
                     card_buttons(
                         textos=["Portfolio", "Biografía", "Contacto", "Libros"],
                         enlaces = [PORTFOLIO, BIO, CONTACTO, LIBROS],
                         iconos = ["briefcase_business", "user-pen", "mail", "book_text"]
                     ),
-                    width="100%"
-                )
+                    width="100%",
+                    padding_top=Size.MAX_BIG.value,
+                    padding_left=Size.VERY_BIG.value
+                ),
+                heigth="100%"
             )
         ),
         footer()
